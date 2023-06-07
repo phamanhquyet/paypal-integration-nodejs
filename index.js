@@ -9,10 +9,12 @@ paypal.configure({
 
 const app = express();
 
+// Route for the homepage
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+// Route for handling PayPal payment request
 app.post('/pay', (req, res) => {
   const create_payment_json = {
     intent: 'sale',
@@ -44,7 +46,7 @@ app.post('/pay', (req, res) => {
       },
     ],
   };
-
+  // Create a PayPal payment
   paypal.payment.create(create_payment_json, function (error, payment) {
     if (error) {
       throw error;
@@ -58,6 +60,7 @@ app.post('/pay', (req, res) => {
   });
 });
 
+// Route for handling successful payment confirmation
 app.get('/success', (req, res) => {
   const payerId = req.query.PayerID;
   const paymentId = req.query.paymentId;
@@ -74,6 +77,7 @@ app.get('/success', (req, res) => {
     ],
   };
 
+  // Execute the PayPal payment
   paypal.payment.execute(paymentId, execute_payment_json, function (error, payment) {
     if (error) {
       console.log(error.response);
@@ -85,10 +89,12 @@ app.get('/success', (req, res) => {
   });
 });
 
+// Route for handling payment cancellation
 app.get('/cancel', (req, res) => res.send('Cancelled'));
 
 const PORT = 3000 || process.env.PORT;
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server started on ${PORT}`);
 });
