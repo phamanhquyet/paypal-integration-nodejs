@@ -32,3 +32,8 @@ Business account (Seller/Người bán):
 email: anhquyetbusiness@gmail.com
 password: anhquyetbusiness
 ```
+
+## Code explaination
+
+Tiếng việt: [tại đây](https://github.com/phamanhquyet/paypal-integration-nodejs/blob/master/Explaination-vi.md)
+English: [here](https://github.com/phamanhquyet/paypal-integration-nodejs/blob/master/Explaination-en.md)
