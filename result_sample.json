@@ -1,0 +1,125 @@
+{
+  "id": "PAYID-MSAE53A7CC13028A6411463S",
+  "intent": "sale",
+  "state": "approved",
+  "cart": "9DK03797P6155220G",
+  "payer": {
+    "payment_method": "paypal",
+    "status": "VERIFIED",
+    "payer_info": {
+      "email": "minhnhatpersonal@gmail.com",
+      "first_name": "Do",
+      "last_name": "Minh Nhat",
+      "payer_id": "CBGABWKY4Y8MW",
+      "shipping_address": {
+        "recipient_name": "Do Minh Nhat",
+        "line1": "1 Main St",
+        "city": "San Jose",
+        "state": "CA",
+        "postal_code": "95131",
+        "country_code": "US"
+      },
+      "country_code": "US"
+    }
+  },
+  "transactions": [
+    {
+      "amount": {
+        "total": "5.00",
+        "currency": "USD",
+        "details": {
+          "subtotal": "5.00",
+          "shipping": "0.00",
+          "insurance": "0.00",
+          "handling_fee": "0.00",
+          "shipping_discount": "0.00",
+          "discount": "0.00"
+        }
+      },
+      "payee": {
+        "merchant_id": "ZA624YH8NA2XC",
+        "email": "anhquyetbusiness@gmail.com"
+      },
+      "description": "Hat for the best team ever",
+      "item_list": {
+        "items": [
+          {
+            "name": "Red Sox Hat",
+            "sku": "001",
+            "price": "5.00",
+            "currency": "USD",
+            "tax": "0.00",
+            "quantity": 1,
+            "image_url": ""
+          }
+        ],
+        "shipping_address": {
+          "recipient_name": "Do Minh Nhat",
+          "line1": "1 Main St",
+          "city": "San Jose",
+          "state": "CA",
+          "postal_code": "95131",
+          "country_code": "US"
+        }
+      },
+      "related_resources": [
+        {
+          "sale": {
+            "id": "8AX65924PR596470M",
+            "state": "completed",
+            "amount": {
+              "total": "5.00",
+              "currency": "USD",
+              "details": {
+                "subtotal": "5.00",
+                "shipping": "0.00",
+                "insurance": "0.00",
+                "handling_fee": "0.00",
+                "shipping_discount": "0.00",
+                "discount": "0.00"
+              }
+            },
+            "payment_mode": "INSTANT_TRANSFER",
+            "protection_eligibility": "ELIGIBLE",
+            "protection_eligibility_type": "ITEM_NOT_RECEIVED_ELIGIBLE,UNAUTHORIZED_PAYMENT_ELIGIBLE",
+            "transaction_fee": {
+              "value": "0.66",
+              "currency": "USD"
+            },
+            "parent_payment": "PAYID-MSAE53A7CC13028A6411463S",
+            "create_time": "2023-06-07T09:33:40Z",
+            "update_time": "2023-06-07T09:33:40Z",
+            "links": [
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8AX65924PR596470M",
+                "rel": "self",
+                "method": "GET"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/sale/8AX65924PR596470M/refund",
+                "rel": "refund",
+                "method": "POST"
+              },
+              {
+                "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-MSAE53A7CC13028A6411463S",
+                "rel": "parent_payment",
+                "method": "GET"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "failed_transactions": [],
+  "create_time": "2023-06-07T09:33:31Z",
+  "update_time": "2023-06-07T09:33:40Z",
+  "links": [
+    {
+      "href": "https://api.sandbox.paypal.com/v1/payments/payment/PAYID-MSAE53A7CC13028A6411463S",
+      "rel": "self",
+      "method": "GET"
+    }
+  ],
+  "httpStatusCode": 200
+}
