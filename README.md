@@ -11,6 +11,8 @@ npm i
 npm start
 ```
 
+Go to browser and go to http://localhost:3000
+
 ## View payment history and balance in the account:
 
 STEP 1: go to this link: click [here](https://sandbox.paypal.com/mep/dashboard)
